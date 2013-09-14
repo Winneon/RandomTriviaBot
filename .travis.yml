@@ -3,6 +3,7 @@ language: python
 intall: pip install praw
 python:
 - "3.2"
+script: nosetests
 before_script: python run.py
 notifications:
     email: false
