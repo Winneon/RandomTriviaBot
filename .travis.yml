@@ -1,0 +1,8 @@
+---
+language: python
+intall: pip install praw
+python:
+- "3.2"
+before_script: python run.py
+notifications:
+    email: false
