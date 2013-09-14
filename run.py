@@ -1,10 +1,10 @@
 import praw, time, sys, os, json
 
 defaultConfig = {
-	'reddit': {
-        'alert': '',
+    'reddit': {
+        'username': '',
         'password': '',
-		'username': '',
+        'alert': '',
 		},
 }
 
