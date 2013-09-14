@@ -1,5 +1,6 @@
 import praw, time, sys, os, json
 
+# The default configuration that the login and alert scripts read.
 defaultConfig = {
 	'reddit': {
 		'username': '',
