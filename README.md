@@ -1,10 +1,12 @@
 RandomTriviaBot [![Build Status](https://travis-ci.org/WinneonSword/RandomTriviaBot.png?branch=master)](https://travis-ci.org/WinneonSword/RandomTriviaBot)
 ===============
 **RandomTriviaBot ( abbreviated RTB )** is a simple beta Reddit bot that comments on any post that has one of the several activation words. The main point of this bot is to bring just some randomness to your day and to maybe bring a little smile on your face. :)
+
 Current Activation Words
 ------------------------
 * cactus
 * cacti
+
 Credit
 ------
 * [TweetPoster](https://github.com/buttscicles/TweetPoster), for the inspiration and configuration code.
