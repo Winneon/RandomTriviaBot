@@ -9,6 +9,7 @@ defaultConfig = {
 		},
 	'words': {
 		'cactus': 'Did you know that the word *cactus* has 3 different plural variations? (cacti, cactuses, or cactus)',
+		},
 }
 
 def writeConfig(conf):
