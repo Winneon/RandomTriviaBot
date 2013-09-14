@@ -7,13 +7,13 @@ def loadConfig():
 config = loadConfig()
 
 def handleRateLimit(func, *args):
-    while True:
-        try:
-            func(*args)
-            break
-        except praw.errors.RateLimitExceeded as error:
-            print("\tRate limit exceeded! Sleeping for %d seconds" % error.sleep_time)
-            time.sleep(error.sleep_time)
+	while True:
+		try:
+			func(*args)
+			break
+		except praw.errors.RateLimitExceeded as error:
+			print("\tRate limit exceeded! Sleeping for %d seconds" % error.sleep_time)
+			time.sleep(error.sleep_time)
 
 def main():
 	version = "v1.1"
@@ -22,7 +22,7 @@ def main():
 		"/u/WinneonSword's beloved RandomTriviaBot, " + version +
 		"For more: http://github.com/WinneonSword/RandomTriviaBot ( Coming soon! )"
 	)
-
+	
 	r = praw.Reddit(user_agent = userAgent)
 	
 	username = config['reddit']['username']
