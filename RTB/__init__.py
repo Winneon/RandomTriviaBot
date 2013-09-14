@@ -1,4 +1,5 @@
 import praw, time, sys, os, json
+from RTB.messages import message
 
 def loadConfig():
 	config = json.loads(open('config.json').read())
@@ -58,14 +59,16 @@ def main():
 			hasWord = any(string in selfPost for string in activationWords)
 			hasTitle = any(string in selfTitle for string in activationWords)
 			if submission.id not in cache and hasWord:
+				word = string in selfPost for string in activationWords
 				print("\tFound valid post at submission id '" + submission.id + "'! Adding comment...")
-				handleRateLimit(submission.add_comment, cactusMessage)
+				handleRateLimit(submission.add_comment, message(word))
 				cache.append(submission.id)
 				print("\tComment posted!")
 				break
 			if submission.id not in cache and hasTitle:
 				print("\tFound valid post at submission id of '" + submission.id + "'! Adding comment...")
-				handleRateLimit(submission.add_comment, cactusMessage)
+				word = string in selfPost for string in activationWords
+				handleRateLimit(submission.add_comment, message(word))
 				cache.append(submission.id)
 				print("\tComment posted!")
 				break
