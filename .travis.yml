@@ -1,6 +1,6 @@
 ---
 language: python
-intall: pip install praw
+intall: pip install -r requirements.txt --use-mirrors
 python:
 - "3.2"
 script: nosetests
