@@ -59,7 +59,7 @@ def main():
 			hasWord = any(string in selfPost for string in activationWords)
 			hasTitle = any(string in selfTitle for string in activationWords)
 			if submission.id not in cache and hasWord:
-				if submission.subreddit not in bannedSubs:
+				if submission.subreddit.display_name not in bannedSubs:
 					temp = [(selfPost.find(i), i) for i in activationWords if i in selfPost]
 					word = min(temp)[1]
 					print("\tFound valid post at submission id '" + submission.id + "'! Adding comment...")
@@ -71,7 +71,7 @@ def main():
 					print("\tThe subreddit '" + submission.subreddit + "' is in the bannedSubs list!")
 					break
 			if submission.id not in cache and hasTitle:
-				if submission.subreddit not in bannedSubs:
+				if submission.subreddit.display_name not in bannedSubs:
 					print("\tFound valid post at submission id of '" + submission.id + "'! Adding comment...")
 					temp = [(selfTitle.find(i), i) for i in activationWords if i in selfTitle]
 					word = min(temp)[1]
