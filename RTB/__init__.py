@@ -42,12 +42,6 @@ def main():
 	
 	r.send_message(userAlert, subjectAlert, messageAlert)
 	cache = []
-	cactusMessage = (
-					"**Hello,**" + "\n\n"
-					"The word *cactus* was found in your post!" + "\n\n"
-					"Did you know that the word *cactus* has 3 different plural variations? (cacti, cactuses, or cactus)" + "\n\n"
-					"**Aaand thats all folks!**"
-	)
 	
 	activationWords = ['cactus', 'rofl']
 	while True:
