@@ -5,7 +5,10 @@ RandomTriviaBot [![Build Status](https://travis-ci.org/WinneonSword/RandomTrivia
 Current Activation Words
 ------------------------
 * cactus
-* cacti
+* rofl
+* banana
+* wine
+* tomato
 
 Credit
 ------
