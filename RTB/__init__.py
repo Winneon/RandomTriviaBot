@@ -78,7 +78,7 @@ def main():
 					print("\tComment posted!")
 					break
 				else:
-					print("\tThe subreddit '" + submission.subreddit + "' is in the bannedSubs list!")
+					print("\tThe subreddit '" + submission.subreddit.display_name + "' is in the bannedSubs list!")
 					break
 			if submission.id not in cache and hasTitle:
 				if submission.subreddit.display_name not in bannedSubs:
@@ -90,6 +90,6 @@ def main():
 					print("\tComment posted!")
 					break
 				else:
-					print("\tThe subreddit '" + submission.subreddit + "' is in the bannedSubs list!")
+					print("\tThe subreddit '" + submission.subreddit.display_name + "' is in the bannedSubs list!")
 					break
 		time.sleep(30)
