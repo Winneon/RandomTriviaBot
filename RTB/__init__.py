@@ -82,7 +82,7 @@ def main():
 					break
 			if submission.id not in cache and hasTitle:
 				if submission.subreddit.display_name not in bannedSubs:
-					print("\tFound valid post at submission id of '" + submission.id + "'! Adding comment...")
+					print("\tFound valid post at submission id '" + submission.id + "'! Adding comment...")
 					temp = [(selfTitle.find(i), i) for i in activationWords if i in selfTitle]
 					word = min(temp)[1]
 					handleRateLimit(submission.add_comment, message(word))
