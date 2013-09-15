@@ -52,7 +52,7 @@ def main():
 	activationWords = ['cactus', 'rofl']
 	while True:
 		print("[ wsRTB ] - Fetching new posts...")
-		subreddit = r.get_subreddit("worldsapart")
+		subreddit = r.get_subreddit("all")
 		for submission in subreddit.get_new(limit = 30):
 			selfPost = submission.selftext.lower()
 			selfTitle = submission.title.lower()
