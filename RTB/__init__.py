@@ -24,6 +24,16 @@ def main():
 	bannedSubs.add('GoneWildPlus')
 	bannedSubs.add('porn')
 	bannedSubs.add('nsfw')
+	bannedSubs.add('NetherWreck')
+	bannedSubs.add('magicTCG')
+	bannedSubs.add('sanfrancisco')
+	bannedSubs.add('gardening')
+	bannedSubs.add('ibs')
+	bannedSubs.add('pokemonzetaomicron')
+	bannedSubs.add('learnpython')
+	bannedSubs.add('wine')
+	bannedSubs.add('CivCarson')
+	bannedSubs.add('malefashionadvice')
 	
 	userAgent = (
 		"/u/WinneonSword's beloved RandomTriviaBot, " + version +
@@ -49,7 +59,7 @@ def main():
 	r.send_message(userAlert, subjectAlert, messageAlert)
 	cache = []
 	
-	activationWords = ['cactus', 'rofl', 'banana', 'wine', 'tomato']
+	activationWords = ['cactus', 'rofl', 'banana', 'wine', 'tomato', 'pineapple', 'dolphin']
 	while True:
 		print("[ wsRTB ] - Fetching new posts...")
 		subreddit = r.get_subreddit("all")

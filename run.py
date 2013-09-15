@@ -13,6 +13,8 @@ defaultConfig = {
 		'banana': 'Did you know that there is a book called "Fighting the Banana Wars and other Fairtrade Battles" by Harriet Lamb?',
 		'wine': 'Did you know that *wine* has been in production dating back to 7000 BC?',
 		'tomato': 'Did you know that *tomatoes* are commonly misconcepted as being a vegetable, when it actually is a fruit?',
+		'pineapple': 'Did you know that if you eat a lot of *pineapple*, your taste buds will taste things sweeter than normal?',
+		'dolphin': 'Did you know that dolphins swim in groups up to several hundred in size?'
 		},
 }
 
