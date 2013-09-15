@@ -43,7 +43,7 @@ def main():
 	r.send_message(userAlert, subjectAlert, messageAlert)
 	cache = []
 	
-	activationWords = ['cactus', 'rofl']
+	activationWords = ['cactus', 'rofl', 'banana', 'wine', 'tomato']
 	while True:
 		print("[ wsRTB ] - Fetching new posts...")
 		subreddit = r.get_subreddit("all")
