@@ -9,6 +9,8 @@ Current Activation Words
 * banana
 * wine
 * tomato
+* pineapple
+* dolphin
 
 Credit
 ------
