@@ -53,7 +53,9 @@ def main():
 					"**Hello there,**" + "\n\n"
 					"This is **RandomTriviaBot**. As you can see with this message, I have been activated, so if I have not been activated by you, then please turn me off." + "\n\n"
 					"**Thanks,**" + "\n\n"
-					"RandomTriviaBot, " + version
+					"RandomTriviaBot, " + version + "\n\n"
+					"*****" + "\n\n"
+					"^This ^bot ^is ^not ^meant ^as ^an ^annoyance ^or ^distraction. ^If ^it ^is, ^then ^feel ^free ^to ^contact ^/u/WinneonSword ^or ^post ^at ^/r/RandomTriviaBot ^and ^the ^subreddit ^will ^be ^added ^to ^RandomTriviaBot's ^filters."
     )
 	
 	r.send_message(userAlert, subjectAlert, messageAlert)
