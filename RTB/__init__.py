@@ -49,17 +49,18 @@ def main():
 					"**Aaand thats all folks!**"
 	)
 	
-	activationWords = ['cactus', 'cacti']
+	activationWords = ['cactus', 'rofl']
 	while True:
 		print("[ wsRTB ] - Fetching new posts...")
-		subreddit = r.get_subreddit("all")
+		subreddit = r.get_subreddit("worldsapart")
 		for submission in subreddit.get_new(limit = 30):
 			selfPost = submission.selftext.lower()
 			selfTitle = submission.title.lower()
 			hasWord = any(string in selfPost for string in activationWords)
 			hasTitle = any(string in selfTitle for string in activationWords)
 			if submission.id not in cache and hasWord:
-				word = string in selfPost for string in activationWords
+				temp = [(selfPost.find(i), i) for i in activationWords if i in selfPost]
+				word = min(temp)[1]
 				print("\tFound valid post at submission id '" + submission.id + "'! Adding comment...")
 				handleRateLimit(submission.add_comment, message(word))
 				cache.append(submission.id)
@@ -67,7 +68,8 @@ def main():
 				break
 			if submission.id not in cache and hasTitle:
 				print("\tFound valid post at submission id of '" + submission.id + "'! Adding comment...")
-				word = string in selfPost for string in activationWords
+				temp = [(selfTitle.find(i), i) for i in activationWords if i in selfPost]
+				word = min(temp)[1]
 				handleRateLimit(submission.add_comment, message(word))
 				cache.append(submission.id)
 				print("\tComment posted!")

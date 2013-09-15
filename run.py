@@ -9,6 +9,7 @@ defaultConfig = {
 		},
 	'words': {
 		'cactus': 'Did you know that the word *cactus* has 3 different plural variations? (cacti, cactuses, or cactus)',
+		'rofl': 'Did you know that on March 24th, 2011, the acronym *rofl* was added to the Oxford English Dictionary?'
 		},
 }
 
