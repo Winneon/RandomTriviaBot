@@ -62,7 +62,7 @@ def main():
 				break
 			if submission.id not in cache and hasTitle:
 				print("\tFound valid post at submission id of '" + submission.id + "'! Adding comment...")
-				temp = [(selfTitle.find(i), i) for i in activationWords if i in selfPost]
+				temp = [(selfTitle.find(i), i) for i in activationWords if i in selfTitle]
 				word = min(temp)[1]
 				handleRateLimit(submission.add_comment, message(word))
 				cache.append(submission.id)
