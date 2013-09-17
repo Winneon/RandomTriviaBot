@@ -34,6 +34,8 @@ def main():
 	bannedSubs.add('wine')
 	bannedSubs.add('CivCarson')
 	bannedSubs.add('malefashionadvice')
+	bannedSubs.add('Android')
+	bannedSubs.add('seduction')
 	
 	userAgent = (
 		"/u/WinneonSword's beloved RandomTriviaBot, " + version +
@@ -47,18 +49,6 @@ def main():
     
 	r.login(username, password)
 	
-	userAlert = config['reddit']['alert']
-	subjectAlert = "RandomTriviaBot has been activated"
-	messageAlert = (
-					"**Hello there,**" + "\n\n"
-					"This is **RandomTriviaBot**. As you can see with this message, I have been activated, so if I have not been activated by you, then please turn me off." + "\n\n"
-					"**Thanks,**" + "\n\n"
-					"RandomTriviaBot, " + version + "\n\n"
-					"*****" + "\n\n"
-					"^This ^bot ^is ^not ^meant ^as ^an ^annoyance ^or ^distraction. ^If ^it ^is, ^then ^feel ^free ^to ^contact ^/u/WinneonSword ^or ^post ^at ^/r/RandomTriviaBot ^and ^the ^subreddit ^will ^be ^added ^to ^RandomTriviaBot's ^filters."
-    )
-	
-	r.send_message(userAlert, subjectAlert, messageAlert)
 	cache = []
 	
 	activationWords = ['cactus', 'rofl', 'banana', 'wine', 'tomato', 'pineapple', 'dolphin']
