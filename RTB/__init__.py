@@ -56,7 +56,7 @@ def main():
 	
 	cache = []
 	
-	activationWords = ['cactus', 'rofl', 'banana', 'wine', 'tomato', 'pineapple', 'dolphin']
+	activationWords = [' cactus ', ' rofl ', ' banana ', ' wine ', ' tomato ', ' pineapple ', ' dolphin ']
 	try:
 		while True:
 			print("[ wsRTB ] - Fetching new posts...")

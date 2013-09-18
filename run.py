@@ -7,13 +7,13 @@ defaultConfig = {
 		'password': '',
 		},
 	'words': {
-		'cactus': 'Did you know that the word *cactus* has 3 different plural variations? (cacti, cactuses, or cactus)',
-		'rofl': 'Did you know that on March 24th, 2011, the acronym *rofl* was added to the Oxford English Dictionary?',
-		'banana': 'Did you know that there is a book called "Fighting the Banana Wars and other Fairtrade Battles" by Harriet Lamb?',
-		'wine': 'Did you know that *wine* has been in production dating back to 7000 BC?',
-		'tomato': 'Did you know that *tomatoes* can be considered as a fruit AND a vegetable?',
-		'pineapple': 'Did you know that if you eat a lot of *pineapple*, your taste buds will taste things sweeter than normal?',
-		'dolphin': 'Did you know that dolphins swim in groups up to several hundred in size?'
+		' cactus ': 'Did you know that the word *cactus* has 3 different plural variations? (cacti, cactuses, or cactus)',
+		' rofl ': 'Did you know that on March 24th, 2011, the acronym *rofl* was added to the Oxford English Dictionary?',
+		' banana ': 'Did you know that there is a book called "Fighting the Banana Wars and other Fairtrade Battles" by Harriet Lamb?',
+		' wine ': 'Did you know that *wine* has been in production dating back to 7000 BC?',
+		' tomato ': 'Did you know that *tomatoes* can be considered as a fruit AND a vegetable?',
+		' pineapple ': 'Did you know that if you eat a lot of *pineapple*, your taste buds will taste things sweeter than normal?',
+		' dolphin ': 'Did you know that dolphins swim in groups up to several hundred in size?'
 		},
 }
 
