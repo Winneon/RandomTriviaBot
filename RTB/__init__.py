@@ -86,5 +86,5 @@ def main():
 						print("\tThe subreddit '" + submission.subreddit.display_name + "' is in the bannedSubs list!")
 						break
 			time.sleep(30)
-	except KeyboardInterrupt as error:
+	except KeyboardInterrupt:
 		print("[ wsRTB ] - Stopped RandomTriviaBot!")		
