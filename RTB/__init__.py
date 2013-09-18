@@ -17,8 +17,8 @@ def handleRateLimit(func, *args):
 			func(*args)
 			break
 		except praw.errors.RateLimitExceeded as error:
-			print("\tRate limit exceeded! Ignoring! THIS IS NOT A GOOD IDEA.")
-			break
+			print("\tRate Limit exceeded! Sleeping for %d seconds to comply with the Reddit API..." % error.sleep_time)
+			time.sleep(error.sleep_time)
 
 def main():
 	version = "v1.1"
@@ -41,18 +41,23 @@ def main():
 	bannedSubs.add('Android')
 	bannedSubs.add('seduction')
 	bannedSubs.add('miamidolphins')
+	bannedSubs.add('slowcooking')
 	
 	userAgent = (
 		"/u/WinneonSword's beloved RandomTriviaBot, " + version +
 		"For more: http://github.com/WinneonSword/RandomTriviaBot"
 	)
 	
-	r = praw.Reddit(user_agent = userAgent)
-	
 	username = config['reddit']['username']
 	password = config['reddit']['password']
-    
-	r.login(username, password)
+	print("[ wsRTB ] - Attempting to connect & login to Reddit...")
+	try:
+		r = praw.Reddit(user_agent = userAgent)
+		r.login(username, password)
+		print("\tSuccessfully connected & logged in to Reddit!")
+	except:
+		print("\tCould not connect to Reddit. Check reddit.com or your config for errors.")
+		sys.exit()
 	
 	cache = []
 	
