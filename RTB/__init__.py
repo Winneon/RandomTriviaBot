@@ -1,5 +1,9 @@
 import praw, time, sys, os, json
 from RTB.messages import message
+from warnings import filterwarnings
+
+filterwarnings("ignore", category = DeprecationWarning)
+filterwarnings("ignore", category = ResourceWarning)
 
 def loadConfig():
 	config = json.loads(open('config.json').read())
@@ -36,6 +40,7 @@ def main():
 	bannedSubs.add('malefashionadvice')
 	bannedSubs.add('Android')
 	bannedSubs.add('seduction')
+	bannedSubs.add('miamidolphins')
 	
 	userAgent = (
 		"/u/WinneonSword's beloved RandomTriviaBot, " + version +
