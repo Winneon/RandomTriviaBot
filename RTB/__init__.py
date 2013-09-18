@@ -95,6 +95,7 @@ def main():
 					else:
 						print("\tThe subreddit '" + submission.subreddit.display_name + "' is in the bannedSubs list!")
 						break
+			print("\tFinished checking comments! Sleeping for 30 seconds...")
 			time.sleep(30)
 	except KeyboardInterrupt:
 		print("[ wsRTB ] - Stopped RandomTriviaBot!")		
