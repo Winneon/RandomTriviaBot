@@ -1,4 +1,4 @@
-import praw, time, sys, os, json
+import praw, time, sys, os, json, argparse
 
 # The default configuration that the login and alert scripts read.
 defaultConfig = {
@@ -23,6 +23,11 @@ def writeConfig(conf):
 		f.write(config)
 
 if __name__ == "__main__":
+	parser = argparse.ArgumentParser(description = 'RandomTriviaBot')
+	parser.add_argument('-l', '--login', action = 'store_true', help = 'Login to a different account')
+	args = parser.parse_args()
+	if args.login:
+		
 	if not os.path.isfile('config.json'):
 		writeConfig(defaultConfig)
 		print("[ wsRTB ] - Created default configuration. Please edit the values before you start this again.")
