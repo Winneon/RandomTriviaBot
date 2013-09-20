@@ -1,4 +1,4 @@
-import praw, time, sys, os, json
+import praw, time, sys, os, json, getpass
 from RTB.messages import message
 from warnings import filterwarnings
 
@@ -10,6 +10,43 @@ def loadConfig():
 	return config
 
 config = loadConfig()
+version = "v1.1"
+
+def login():
+	username = config['reddit']['username']
+	password = config['reddit']['password']
+	userAgent = (
+		"/u/WinneonSword's beloved RandomTriviaBot, " + version +
+		"For more: http://github.com/WinneonSword/RandomTriviaBot"
+	)
+	
+	print("[ wsRTB ] - Attempting to connect & login to Reddit...")
+	try:
+		r = praw.Reddit(user_agent = userAgent)
+		r.login(username, password)
+		print("\tSuccessfully connected & logged in to Reddit!")
+	except:
+		print("\tCould not connect to Reddit. Check reddit.com or your config for errors.")
+		sys.exit()
+	main()
+
+def customLogin():
+	username = input('\tPlease enter your username: ')
+	password = getpass.getpass("\tPlease enter the password for '%s': " % username)
+	userAgent = (
+		"/u/WinneonSword's beloved RandomTriviaBot, " + version +
+		"For more: http://github.com/WinneonSword/RandomTriviaBot"
+	)
+	
+	print("[ wsRTB ] - Attempting to connect & login to Reddit...")
+	try:
+		r = praw.Reddit(user_agent = userAgent)
+		r.login(username, password)
+		print("\tSuccessfully connected & logged in to Reddit!")
+	except:
+		print("\tCould not connect to Reddit. Check your username or password.")
+		sys.exit()
+	main()
 
 def handleRateLimit(func, *args):
 	while True:
@@ -20,9 +57,7 @@ def handleRateLimit(func, *args):
 			print("\tRate Limit exceeded! Sleeping for %d seconds to comply with the Reddit API..." % error.sleep_time)
 			time.sleep(error.sleep_time)
 
-def main():
-	version = "v1.1"
-	
+def main():	
 	bannedSubs = set()
 	bannedSubs.add('gonewild')
 	bannedSubs.add('GoneWildPlus')
@@ -48,17 +83,7 @@ def main():
 		"For more: http://github.com/WinneonSword/RandomTriviaBot"
 	)
 	
-	username = config['reddit']['username']
-	password = config['reddit']['password']
-	print("[ wsRTB ] - Attempting to connect & login to Reddit...")
-	try:
-		r = praw.Reddit(user_agent = userAgent)
-		r.login(username, password)
-		print("\tSuccessfully connected & logged in to Reddit!")
-	except:
-		print("\tCould not connect to Reddit. Check reddit.com or your config for errors.")
-		sys.exit()
-	
+	r = praw.Reddit(user_agent = userAgent)
 	cache = []
 	
 	activationWords = ['cactus', 'rofl', 'banana', 'wine', 'tomato', 'pineapple', 'dolphin']
